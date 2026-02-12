@@ -1,0 +1,6 @@
+@FlumeMiniWallet_HostAddress = http://localhost:5154
+
+GET {{FlumeMiniWallet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
