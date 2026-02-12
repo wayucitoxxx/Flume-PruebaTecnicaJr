@@ -10,7 +10,7 @@ namespace Flume.Domain.Entities
         public int Id { get; set; }
         [Required]
         [MaxLength(20)]
-        public string Type { get; set; } // income || expense
+        public string Type { get; set; } = null!; // income || expense
         [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Amount { get; set; }
@@ -20,6 +20,6 @@ namespace Flume.Domain.Entities
         public int UserId { get; set; }
         //Navigation Property
         [ForeignKey("UserId")]
-        public User User { get; set; }
+        public User User { get; set; } = null!;
     }
 }
