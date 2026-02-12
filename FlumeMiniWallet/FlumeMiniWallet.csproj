@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Flume.Application\Flume.Application.csproj" />
+    <ProjectReference Include="..\Flume.Infrastructure\Flume.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
