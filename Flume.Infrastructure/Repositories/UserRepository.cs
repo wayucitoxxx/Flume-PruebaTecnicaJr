@@ -23,5 +23,11 @@ namespace Flume.Infrastructure.Repositories
         {
             return await _context.Set<User>().ToListAsync(cancellationToken);
         }
+
+        public async Task<User?> GetByEmailAsync(string email, CancellationToken cancellationToken)
+        {
+            return await _context.Set<User>()
+                .FirstOrDefaultAsync(u => u.Email == email, cancellationToken);
+        }
     }
 }
