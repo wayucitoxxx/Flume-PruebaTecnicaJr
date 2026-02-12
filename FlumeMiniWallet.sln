@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlumeMiniWallet", "FlumeMiniWallet\FlumeMiniWallet.csproj", "{07537A03-4DB2-45C8-9FED-893CA941FB0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlumeMiniWallet.API", "FlumeMiniWallet\FlumeMiniWallet.API.csproj", "{07537A03-4DB2-45C8-9FED-893CA941FB0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flume.Domain", "Flume.Domain\Flume.Domain.csproj", "{C3CF4645-2473-4267-B7B1-C604710B5B1E}"
 EndProject
