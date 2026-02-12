@@ -16,9 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
     <Folder Include="Feature\Transactions\" />
-    <Folder Include="Feature\Users\" />
   </ItemGroup>
 
 </Project>
