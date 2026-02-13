@@ -1,5 +1,4 @@
 ﻿using Flume.Application.Dtos;
-using Flume.Application.Feature.Users.Handlers;
 using Flume.Application.Feature.Users.Queries;
 using Flume.Application.Features.Users.Commands.CreateUser;
 using MediatR;
