@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using Flume.Application.Dtos;
 using Flume.Application.Features.Users.Commands.CreateUser;
 using Flume.Application.Interfaces;
 using Flume.Domain.Entities;
@@ -8,7 +9,7 @@ using System.Threading;
 namespace Flume.Application.Features.Users.Handlers
 {
     public class CreateUserCommandHandler
-        : IRequestHandler<CreateUserCommand, int>
+        : IRequestHandler<CreateUserCommand, CreateUserDto>
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -18,7 +19,7 @@ namespace Flume.Application.Features.Users.Handlers
 
         }
 
-        public async Task<int> Handle(
+        public async Task<CreateUserDto> Handle(
             CreateUserCommand request,
             CancellationToken cancellationToken)
         {
@@ -37,7 +38,11 @@ namespace Flume.Application.Features.Users.Handlers
             await _unitOfWork.User.AddAsync(user, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return (user.Id);
+            return new CreateUserDto
+            {
+                Name = user.Name,
+                Email = user.Email
+            };
         }
     }
 }

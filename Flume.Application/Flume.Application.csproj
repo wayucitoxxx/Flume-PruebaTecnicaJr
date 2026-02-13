@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Flume.Domain\Flume.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Feature\Transactions\" />
-  </ItemGroup>
-
 </Project>
