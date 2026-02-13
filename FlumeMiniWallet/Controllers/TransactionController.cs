@@ -33,7 +33,7 @@ namespace FlumeMiniWallet.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("user/{userId}")]
+        [HttpGet("user/{Id}")]
         public async Task<ActionResult<IEnumerable<TransactionDto>>> GetByUserId(int userId)
         {
             var query = new GetTransactionsByUserIdQuery(userId);
@@ -41,7 +41,7 @@ namespace FlumeMiniWallet.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}/balance")]
+        [HttpGet("{Id}/balance")]
         public async Task<ActionResult<UserBalanceDto>> GetBalance(int id)
         {
             var query = new GetUserBalanceQuery(id);
